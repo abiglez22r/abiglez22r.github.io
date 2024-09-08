@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--enlace de boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css"> <!--enlace a los estilos-->
+    <script defer src="./scrip.js"></script>
+    <title>Bienvenido a Jabones TLALLI</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="./imagenes/logo.png" width="100px" alt="logo tlalli">
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <!--img src="./imagenes/menu.png" alt="menu" onclick="toggleMenu()" style="cursor: pointer;">-->
+        <nav class="navbar" id="navbar">
+            </div>
+            <ul class="menu">
+                <li><a href="#div1">¿Quiénes Somos?</a></li>
+                <li><a href="catalogo.html">Productos</a></li>
+                <li><a href="#div1.1">Novedades</a></li>
+                <li><a href="#div2">Talleres</a></li> <!--#ref es para hacer un salto de nav-->
+                <li><a href="#div3">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <div id="carouselSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./imagenes/jabones.png" class="d-block w-100" alt="muestra">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagenes/desodorantes.jpg" class="d-block w-100" alt="desodorantes">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagenes/shampoos.png" class="d-block w-100" alt="shampoos">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagenes/velas.jpg" class="d-block w-100" alt="velas">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselSlidesOnly"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselSlidesOnly"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="contenedor1 my-4 row">
+            <!--<div class="row"> --><!--se divide en filas my-4 es para agregar margen vertical arriba y abajo -->
+            <div class="articulo col-md-4 text-center">
+                <h2>Jabones hidratantes</h2>
+                <img src="./imagenes/1.png" class="imagenes" alt="hidratantes"><br>
+                <p>Formulados para aportar una hidratación intensa a la piel. Suelen contener ingredientes
+                    como aceites naturales (coco, oliva, almendra) y mantecas (karité, cacao) que ayudan a
+                    mantener la piel suave y nutrida, evitando la sequedad y la deshidratación.</p>
+                <div id="contenido1">
+                    <ul>
+                        <li>Jabon de Aloe Vera</li>
+                        <li>Jabon de rosas</li>
+                        <li>Jabon de romero</li>
+                    </ul>
+                </div>
+                <button onclick="muestra_oculta('contenido1')" class="btn btn-dark" form="contenido1">+
+                    INFORMACIÓN</button>
+            </div>
+
+            <div class=" articulo col-md-4 text-center">
+                <h2>Jabones antiacné</h2>
+                <img src="./imagenes/2.png" class="imagenes" alt="antiacne"><br>
+                <div id="contenido2">
+                    <p>Diseñados para combatir y prevenir el acné. Estos jabones suelen incluir ingredientes
+                        como ácido salicílico, aceite de árbol de té, o carbón activado, que ayudan a limpiar
+                        profundamente los poros, reducir el exceso de grasa y calmar la inflamación.</p>
+                </div>
+                <button onclick="muestra_oculta('contenido2')" class="btn btn-dark" form="contenido2">+
+                    INFORMACIÓN</button>
+            </div>
+
+            <div class="articulo col-md-4 text-center">
+                <h2>Jabones para líneas de expresión</h2>
+                <img src="./imagenes/3.png" class="imagenes" alt="lineasexpresion"><br>
+                <div id="contenido3">
+                    <p>Enriquecidos con ingredientes que ayudan a reducir la apariencia de las líneas finas y
+                        arrugas. Pueden contener antioxidantes como la vitamina E, colágeno, y aceites
+                        esenciales que promueven la firmeza y elasticidad de la piel.</p>
+                </div>
+                <button onclick="muestra_oculta('contenido3')" class="btn btn-dark" form="contenido3">+
+                    INFORMACIÓN</button>
+            </div>
+        </div>
+        </div>
+        <div class="contenedor2 my-4 row">
+            <div class="articulo col-md-4 text-center">
+                <h2>Jabones para regenerar la piel</h2>
+                <img src="./imagenes/4.png" class="imagenes" alt="regenerador"><br>
+                <div id="contenido4">
+                    <p>Enfocados en la renovación y reparación de la piel dañada o envejecida. Estos jabones a
+                        menudo incluyen ingredientes como retinol, ácido hialurónico, o extractos botánicos que
+                        fomentan la regeneración celular y mejoran la textura de la piel.</p>
+                </div>
+                <button onclick="muestra_oculta('contenido4')" class="btn btn-dark" form="contenido4">+
+                    INFORMACIÓN</button>
+            </div>
+            <div class="articulo col-md-4 text-center">
+                <h2>Jabones aclarantes</h2>
+                <img src="./imagenes/5.png" class="imagenes" alt="aclarantes"><br>
+                <div id="contenido5">
+                    <p>Diseñados para unificar el tono de la piel y reducir manchas. Suelen contener
+                        ingredientes como vitamina C, ácido glicólico, o extractos de plantas como la papaya,
+                        que ayudan a iluminar la piel y disminuir la hiperpigmentación.</p>
+                </div>
+                <button onclick="muestra_oculta('contenido5')" class="btn btn-dark" form="contenido5">+
+                    INFORMACIÓN</button>
+            </div>
+            <div class="articulo col-md-4 text-center">
+                <h2>Jabones exfoliantes</h2>
+                <img src="./imagenes/6.png" class="imagenes" alt="exfoliantes"><br>
+                <div id="contenido6">
+                    <p>Enriquecidos con ingredientes que ayudan a reducir la apariencia de las líneas finas y
+                        arrugas. Pueden contener antioxidantes como la vitamina E, colágeno, y aceites
+                        esenciales que promueven la firmeza y elasticidad de la piel.</p>
+                </div>
+                <button onclick="muestra_oculta('contenido6')" class="btn btn-dark" form="contenido6">+
+                    INFORMACIÓN</button>
+            </div>
+        </div>
+
+        <div id="div1">
+            <h2><strong>¿Quiénes somos?</strong></h2><br />
+            <h3>Nuestra Misión</h3>
+            <p>En Tlalli, creamos productos artesanales y ecológicos cuidando de la piel y el medio ambiente. Utilizando
+                ingredientes naturales y técnicas tradicionales, fomentando la sostenibilidad y respeto por la
+                naturaleza.</p>
+            <h3>Nuestra Visión</h3>
+            <p>Queremos ser líderes en productos artesanales y ecológicos, destacando la excelencia en cada producto de
+                Tlalli. Buscamos convertir la rutina en un lujo conectado con la naturaleza.</p>
+        </div>
+        <div id="div1.1">
+
+            <h2><strong>Novedades</strong> <img src="./imagenes/star.svg" alt="star" width="20px"></h2>
+            <h3>Cónoce nuestros nuevos productos</h3>
+            <h4>Velas artesanales</h4>
+            <span><img src="./imagenes/vela.jpg" alt="vela" width="50%"></span>
+            <h4>Separadores de libros (papel reciclado)</h4>
+            <img src="./imagenes/separador.jpg" alt="separador" width="50%"></span>
+
+        </div>
+        <div id="div2">
+            <div class="flex-row">
+                <h2>Talleres <img src="./imagenes/paleta.svg" alt="paleta" width="20px"></h2><br />
+                <ul>
+                    <li>Taller de Jabones Artesanales</li>
+                    <li>Taller de Shampoo en Gel</li>
+                    <li>Taller de Desodorantes Orgánicos</li>
+                    <li>Taller de Velas Artesanales</li>
+                    <li>Taller de Papel Reciclado</li>
+                </ul>
+            </div>
+        </div>
+        <div id="div3" class="div3">
+            <h2>Contáctanos</h2><br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/9oRsAEkyqRo?si=oHmS2f6ig1iJZjQM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </main>
+
+    <!--<section class="icons container">
+            <div class="icon-1">
+                <img src="./imagenes/paleta.svg" alt="paleta">
+
+            </div>
+
+        </section>
+      -->
+    <div class="container-fluid bg-dark">
+        <footer>
+            <div class="social-media">
+                <a href="https://www.facebook.com/profile.php?id=61563078933347" target="_blank">
+                    <img src="./imagenes/face.png" alt="facebook" class="redes"></a>
+                <a href="https://www.instagram.com/tlalli.jabonesarte/" target="_blank">
+                    <img src="./imagenes/insta.png" alt="instagram" class="redes"></a>
+                <a href="https://wa.me/522216298011" target="_blank">
+                    <img src="./imagenes/whats.png" alt="whatsapp" class="redes"></a>
+            </div><br>
+            <p class="text-light"> Conoce nuestra Politica de Privacidad</p>
+        </footer>
+    </div>
+
+    <script src="scrip.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384- w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
